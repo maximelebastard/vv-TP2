@@ -1,6 +1,19 @@
-# TP2 vv
-Here you will find the material for the second Tp of the Testing Course which copes with the generation of mocks for stubbing and interaction testing.
+V&V - TP4
+===
+Maxime Lebastard
 
-The objective of this lab session is to understand what it means to testmultiple inter-dependent classes. This goes from the realization of a test plan to the use of mocks for stubbing and interaction testing.
+Test Plan
+---
+As we can see on the dependencies graph, there is few class that not references others:
+* Direction
+* OutOfBoardException
 
-Go to http://people.rennes.inria.fr/Benoit.Baudry/test-course/ to find more information
+Then, when these two are checked and ok, Pawn class can be tested as it only refers to Direction and OutOfBoardException. Then Board, then Game and to finish, we can test Main.
+
+In consequence, the path is this:
+* Direction
+* OutOfBoardException
+* Pawn
+* Board
+* Game
+* Main
