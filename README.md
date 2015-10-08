@@ -2,9 +2,9 @@ V&V - TP4
 ===
 Maxime Lebastard
 
-Test Plan
+Question 1 & 2 : Test Plan
 ---
-As we can see on the dependencies graph, there is few class that not references others:
+As we can see on [the dependencies graph](Report/DependenciesView.png), there is few class that not references others:
 * Direction
 * OutOfBoardException
 
