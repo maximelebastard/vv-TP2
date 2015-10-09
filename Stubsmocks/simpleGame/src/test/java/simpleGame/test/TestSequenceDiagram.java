@@ -26,6 +26,9 @@ public class TestSequenceDiagram extends TestCase {
 	private Pawn pawn1;
 	private Pawn pawn2;
 	
+	/**
+	 * Before running the test, we will initialize mocks
+	 */
 	@Before
 	public void setUp(){
 		board = mock(Board.class);
@@ -33,6 +36,9 @@ public class TestSequenceDiagram extends TestCase {
 		pawn2 = mock(Pawn.class);
 	}
 	
+	/**
+	 * IsGameOver method interaction testing
+	 */
 	@Test
 	public void isGameOver_correct() {
 		GameForTest game = new GameForTest();
@@ -49,6 +55,9 @@ public class TestSequenceDiagram extends TestCase {
 
 	}
 	
+	/**
+	 * MaxGold method interaction testing
+	 */
 	@Test
 	public void maxGold_correct() throws OutOfBoardException{
 		Board aBoard = new Board(3, 10, 10, 4, 5);
