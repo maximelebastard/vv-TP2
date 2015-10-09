@@ -2,6 +2,9 @@ V&V - TP4
 ===
 Maxime Lebastard
 
+* [Test report](Stubsmocks/simpleGame/target/surefire-reports)
+* [Test Coverage](Stubsmocks/simpleGame/target/site/jacoco/index.html)
+
 Question 1 & 2 : Test Plan
 ---
 As we can see on [the dependencies graph](Report/DependenciesView.png), there is few class that not references others:
@@ -20,5 +23,7 @@ In consequence, the path is this:
 
 Question 3
 ---
-The objects Pawn1 and Pawn2 need to be mocked because they just provide a getter for this sequence, and it is not necessary to test them. Moreover, mocking them allows us to focus on Board.
-We should also mock Game for some methods, as we cannot act reliably on this object (it has random values, and it's not good for the tests).
+The objects that are interacted with must be mocked because we need to spy them and to make them return the values we want.
+In the first test case, the object we will mock is Board. In the second test, it is the 2 pawns objects.
+
+Note for Programming 2: The maxGold_correct test fails. I do not know if it is a bug or if I don't understand the board well. My test seems correct to me, but I don't see how to patch it.
