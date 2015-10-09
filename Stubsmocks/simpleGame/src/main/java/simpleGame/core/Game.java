@@ -13,7 +13,8 @@ public class Game {
     /**
      * The board of the game
      */
-    private Board board;
+	// Maxime: Modified from private to protected to inject the mock
+    protected Board board;
 
     /**
      * Constructs a Game with 2 pawns on a 4x4 board.

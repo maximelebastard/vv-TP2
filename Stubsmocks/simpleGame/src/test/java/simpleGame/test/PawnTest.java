@@ -17,6 +17,9 @@ import simpleGame.exception.OutOfBoardException;
 @RunWith(MockitoJUnitRunner.class) // This is required for mocks to work
 public class PawnTest extends TestCase {
 
+	/**
+	 * Tests the constructor in a correct context
+	 */
 	@Test
 	public void construct_correct() {
 		Board boardMock = Mockito.mock(Board.class);
@@ -28,6 +31,9 @@ public class PawnTest extends TestCase {
 		assertEquals(0, pawn.getGold());
 	}
 	
+	/**
+	 * Tests the move method in a correct context
+	 */
 	@Test
 	public void move_correct() throws OutOfBoardException {
 		Board boardMock = Mockito.mock(Board.class);
@@ -40,6 +46,9 @@ public class PawnTest extends TestCase {
 		assertEquals(2, pawn.getX());
 	}
 	
+	/**
+	 * Tests the move method in a out of range case
+	 */
 	@Test(expected = OutOfBoardException.class)
 	public void move_out() throws OutOfBoardException {
 		Board boardMock = Mockito.mock(Board.class);

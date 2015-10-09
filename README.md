@@ -17,3 +17,8 @@ In consequence, the path is this:
 * Board
 * Game
 * Main
+
+Question 3
+---
+The objects Pawn1 and Pawn2 need to be mocked because they just provide a getter for this sequence, and it is not necessary to test them. Moreover, mocking them allows us to focus on Board.
+We should also mock Game for some methods, as we cannot act reliably on this object (it has random values, and it's not good for the tests).
